@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="the.css">
+	<title>Flood</title>
+
+</head>
+<body>
+
+<table>
+	<tbody data-bind="foreach: rows">
+		<tr data-bind="foreach: $data">
+			<td data-bind="
+				css: color,
+				click: flood">&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<div>
+	<span data-bind="text: moveCount"></span>
+	/
+	<span data-bind="text: expected"></span>
+</div>
+
+<script src="vendor/underscore.js"></script>
+<script src="vendor/knockout.js"></script>
+<script src="vendor/knockout-es5.js"></script>
+
+<script src="the.js"></script>
+
+</body>
+</html>

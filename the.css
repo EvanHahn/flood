@@ -1,0 +1,32 @@
+.red { background-color: #db2556 }
+.orange { background-color: #ea552d }
+.yellow { background-color: #cfcf0c }
+.green { background-color: #7db31b }
+.blue { background-color: #096975 }
+.violet { background-color: #750965 }
+
+html {
+	width: 100%;
+	height: 100%;
+	display: table;
+	font-family: Lato, "Segoe UI", Avenir, Ubuntu, Tahoma, Verdana, Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-size: 16pt;
+	color: white;
+	background-color: black;
+}
+
+body {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+table {
+	margin: 0 auto 1em auto;
+	border: 2px solid white;
+	box-shadow: 0 0 20px white;
+	width: 400px;
+	height: 400px;
+	border-collapse: collapse;
+}
