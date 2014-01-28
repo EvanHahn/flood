@@ -8,7 +8,7 @@ function Square(game) {
 
 Square.prototype.reset = function reset() {
 	this.controlled = false;
-	this.color = _.sample(COLORS);
+	this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
 };
 
 Square.prototype.flood = function flood() {
