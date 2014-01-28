@@ -115,7 +115,12 @@ Game.prototype.flood = function flood(color) {
 	this.updateControlled();
 
 	if (this.hasWon()) {
-		alert('You win!');
+		var me = this;
+		setTimeout(function() {
+			if (me.moveCount <= me.expected)
+				me.expected --;
+			me.reset();
+		}, 2000);
 	}
 
 };

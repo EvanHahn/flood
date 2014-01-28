@@ -20,6 +20,7 @@ body {
 	display: table-cell;
 	vertical-align: middle;
 	text-align: center;
+	transition: background-color 1s ease-out;
 }
 
 table {
@@ -31,7 +32,7 @@ table {
 	border-collapse: collapse;
 }
 
-body, td {
+td {
 	transition: background-color .2s linear;
 }
 
