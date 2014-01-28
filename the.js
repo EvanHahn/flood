@@ -17,10 +17,21 @@ function Game(options) {
 		size: 14,
 		moveCount: 0,
 		expected: 25,
-		colors: 6
+		colors: 6,
+		rows: []
 	}, options);
 
-	this.rows = [];
+	this.reset();
+
+	ko.track(this);
+
+}
+
+Game.prototype.reset = function reset() {
+
+	this.moveCount = 0;
+
+	this.rows.length = 0;
 	for (var i = 0; i < this.size; i ++) {
 		var row = [];
 		for (var j = 0; j < this.size; j ++) {
@@ -32,9 +43,7 @@ function Game(options) {
 	this.rows[0][0].controlled = true;
 	this.updateControlled();
 
-	ko.track(this);
-
-}
+};
 
 Game.prototype.updateControlled = function updateControlled() {
 

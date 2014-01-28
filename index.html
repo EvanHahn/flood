@@ -3,6 +3,7 @@
 <head>
 
 	<meta charset="utf-8">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 	<link rel="stylesheet" href="the.css">
 	<title>Flood</title>
 
@@ -19,10 +20,25 @@
 	</tbody>
 </table>
 
-<div>
-	<span data-bind="text: moveCount"></span>
-	/
-	<span data-bind="text: expected"></span>
+<div id="bar">
+
+	<div id="count">
+		<span data-bind="text: moveCount"></span>
+		/
+		<span data-bind="text: expected"></span>
+	</div>
+
+	<div id="controls">
+
+		<a data-bind="click: reset">
+			<i class="fa fa-gear"></i>
+		</a>
+		<a data-bind="click: reset">
+			<i class="fa fa-rotate-left"></i>
+		</a>
+
+	</div>
+
 </div>
 
 <script src="vendor/underscore.js"></script>

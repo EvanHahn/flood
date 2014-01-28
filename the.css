@@ -30,3 +30,20 @@ table {
 	height: 400px;
 	border-collapse: collapse;
 }
+
+td {
+	transition: background-color .2s linear;
+}
+
+#bar {
+	margin: 0 auto;
+	width: 400px;
+}
+
+#count {
+	float: left;
+}
+
+#controls {
+	text-align: right;
+}
