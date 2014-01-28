@@ -15,16 +15,13 @@ Square.prototype.flood = function flood() {
 	this.game.flood(this.color);
 };
 
-function Game(options) {
+function Game() {
 
-	_.extend(this, {
-		size: 14,
-		moveCount: 0,
-		expected: 25,
-		colors: 6,
-		rows: []
-	}, options);
+	this.size = 14;
+	this.moveCount = 0;
+	this.expected = 25;
 
+	this.rows = [];
 	for (var i = 0; i < this.size; i ++) {
 		var row = [];
 		for (var j = 0; j < this.size; j ++) {
