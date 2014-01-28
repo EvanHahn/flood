@@ -87,6 +87,9 @@ Game.prototype.updateControlled = function updateControlled() {
 
 Game.prototype.flood = function flood(color) {
 
+	if (this.rows[0][0].color == color)
+		return;
+
 	this.moveCount ++;
 
 	this.rows[0][0].color = color;
