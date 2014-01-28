@@ -120,4 +120,18 @@ Game.prototype.hasWon = function hasWon() {
 	return true;
 };
 
+Game.prototype.askAboutReset = function askAboutReset() {
+	var go;
+	if (this.moveCount)
+		go = confirm('Are you sure you want to reset?');
+	else
+		go = true;
+	if (go)
+		this.reset();
+};
+
+Game.prototype.showOptions = function showOptions() {
+	console.log('TODO');
+};
+
 ko.applyBindings(new Game);
