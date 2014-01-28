@@ -147,8 +147,4 @@ Game.prototype.askAboutReset = function askAboutReset() {
 		this.reset();
 };
 
-Game.prototype.showOptions = function showOptions() {
-	console.log('TODO');
-};
-
 ko.applyBindings(new Game);
