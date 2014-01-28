@@ -2,10 +2,14 @@ var COLORS = ['red', 'orange', 'yellow', 'green', 'blue', 'violet'];
 
 function Square(game) {
 	this.game = game;
-	this.controlled = false;
-	this.color = _.sample(COLORS);
+	this.reset();
 	ko.track(this);
 }
+
+Square.prototype.reset = function reset() {
+	this.controlled = false;
+	this.color = _.sample(COLORS);
+};
 
 Square.prototype.flood = function flood() {
 	this.game.flood(this.color);
@@ -21,6 +25,14 @@ function Game(options) {
 		rows: []
 	}, options);
 
+	for (var i = 0; i < this.size; i ++) {
+		var row = [];
+		for (var j = 0; j < this.size; j ++) {
+			row.push(new Square(this));
+		}
+		this.rows.push(row);
+	}
+
 	this.reset();
 
 	ko.track(this);
@@ -31,13 +43,10 @@ Game.prototype.reset = function reset() {
 
 	this.moveCount = 0;
 
-	this.rows.length = 0;
 	for (var i = 0; i < this.size; i ++) {
-		var row = [];
 		for (var j = 0; j < this.size; j ++) {
-			row.push(new Square(this));
+			this.rows[i][j].reset();
 		}
-		this.rows.push(row);
 	}
 
 	this.rows[0][0].controlled = true;
@@ -125,7 +134,7 @@ Game.prototype.hasWon = function hasWon() {
 
 Game.prototype.askAboutReset = function askAboutReset() {
 	var go;
-	if (this.moveCount)
+	if ((this.moveCount) && (!this.hasWon()))
 		go = confirm('Are you sure you want to reset?');
 	else
 		go = true;
