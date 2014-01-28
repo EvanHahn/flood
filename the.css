@@ -10,7 +10,6 @@ html {
 	height: 100%;
 	display: table;
 	font-family: Lato, "Segoe UI", Avenir, Ubuntu, Tahoma, Verdana, Helvetica, sans-serif;
-	-webkit-font-smoothing: antialiased;
 	font-size: 16pt;
 	color: white;
 	background-color: black;
