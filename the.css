@@ -31,7 +31,7 @@ table {
 	border-collapse: collapse;
 }
 
-td {
+body, td {
 	transition: background-color .2s linear;
 }
 
@@ -42,6 +42,15 @@ td {
 
 #count {
 	float: left;
+}
+
+#count.bad {
+	font-weight: bold;
+	color: red;
+}
+
+.red #count.bad {
+	color: black;
 }
 
 #controls {

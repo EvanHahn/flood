@@ -8,7 +8,7 @@
 	<title>Flood</title>
 
 </head>
-<body>
+<body data-bind="css: rows[0][0].color">
 
 <table>
 	<tbody data-bind="foreach: rows">
@@ -22,7 +22,7 @@
 
 <div id="bar">
 
-	<div id="count">
+	<div id="count" data-bind="css: { bad: moveCount > expected }">
 		<span data-bind="text: moveCount"></span>
 		/
 		<span data-bind="text: expected"></span>
