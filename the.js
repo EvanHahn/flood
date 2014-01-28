@@ -109,10 +109,10 @@ Game.prototype.flood = function flood(color) {
 };
 
 Game.prototype.hasWon = function hasWon() {
-	var color = this.rows[0][0].color;
+	var firstColor = this.rows[0][0].color;
 	for (var i = 0; i < this.size; i ++) {
 		for (var j = 0; j < this.size; j ++) {
-			if (this.rows[i][j].color != color) {
+			if (this.rows[i][j].color != firstColor) {
 				return false;
 			}
 		}
